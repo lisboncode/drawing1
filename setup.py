@@ -14,7 +14,7 @@ setup(
       name="drawing1",
       version="0.1",
       description="Drawing Distribution Package",
-      packages=find_packages(include=['drawing1']),
+      packages=find_packages(),
       include_package_data=True,
       install_requires=install_requires
 )
