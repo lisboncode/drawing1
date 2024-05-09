@@ -12,7 +12,7 @@ if os.path.isfile(requirementPath):
 
 setup(
       name="drawing1",
-      version="0.1",
+      version="1.1",
       description="Drawing Distribution Package",
       packages=find_packages(),
       include_package_data=True,
