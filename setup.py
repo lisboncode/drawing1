@@ -1,13 +1,33 @@
-from distutils.core import setup
+from codecs import open
+from os.path import join, abspath, dirname
+from setuptools import setup, find_packages
+import os
 
-setup(name='drawing1',
-      version='1.0',
-      description='Drawing1 Distribution Package',
-      author='SHR',
-      author_email='Sergio.rodrigues@ipt.pt',
-      url='The URL project - github for example',
-      packages=['drawing1'],
-     )
+requirementPath = 'requirements.txt'
+install_requires = []
+
+if os.path.isfile(requirementPath):
+      with open(requirementPath) as f:
+            install_requires = f.read().splitlines()
+
+here = abspath(dirname(__file__))
+
+# Get the long description from the README file
+with open(join(here, 'README.md'), encoding='utf-8') as buff:
+      long_description = buff.read()
+
+setup(
+      name="drawing1",
+      version="0.1",
+      description="Drawing Distribution Package",
+      long_description=long_description,
+      license='MIT',
+      packages=find_packages(),
+      include_package_data=True,
+      install_requires=install_requires
+)
+
+
 
 
 
