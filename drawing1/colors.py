@@ -1,2 +1,5 @@
 def red():
-    print("Encarnado")
+    print("Vermelho")
+
+def green():
+    print("Verde")
