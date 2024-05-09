@@ -1,3 +1,0 @@
-# Ficheiro de Documentação
-
-**Teste**

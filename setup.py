@@ -10,19 +10,11 @@ if os.path.isfile(requirementPath):
       with open(requirementPath) as f:
             install_requires = f.read().splitlines()
 
-here = abspath(dirname(__file__))
-
-# Get the long description from the README file
-with open(join(here, 'README.md'), encoding='utf-8') as buff:
-      long_description = buff.read()
-
 setup(
       name="drawing1",
       version="0.1",
       description="Drawing Distribution Package",
-      long_description=long_description,
-      license='MIT',
-      packages=find_packages(),
+      packages=find_packages(include=['drawing1']),
       include_package_data=True,
       install_requires=install_requires
 )
